@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with required information</p>
+
+    <form>
+        <fieldset>
+            <label for="first-name">Enter your first name: <input id="first-name" name="first-name" type="text" required></label>
+            <label for="last-name">Enter your last name: <input id="last-name" name="last-name" type="text" required></label>
+            <label for="new-password">Create new password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required></label>
+        </fieldset>
+        <fieldset>
+            <legend>Accound type required</legend>
+            <label for="personal-account"><input type="radio" id="personal-account" name="personal-account" class="inline" checked>Person Account</label>
+            <label for="business-account"><input type="radio" id="business-account" name="business-account" class="inline">Business Account</label>
+        </fieldset>
+        <fieldset>
+            <label for="profile-picture">Upload your profile picture: <input type="file" id="profile-picture" name="file"></label>
+            <label for="age">Input your age (year): <input type="number" id="age" name="age" min="13" max="120"></label>
+            <label for="referrer">How did your hear about us?
+                <select name="referrer" id="referrer">
+                    <option value="">(select one)</option>
+                    <option value="1">freeCodeCamp News</option>
+                    <option value="2">freeCodeCamp YouTube Channel</option>
+                    <option value="3">freeCodeCamp Forum</option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
+            <label for="bio">Provide a bio:
+                <textarea name="bio" id="bio" cols="30" rows="3" placeholder="I would like to write on a beack......"></textarea>
+            </label>           
+        </fieldset>
+        <label for="term-and-conditions">
+            <input type="checkbox" class="inline" id="term-and-conditions" name="term-and-conditions" required>I agree <a href="#">the terms and conditions</a>
+        </label>
+        <input type="submit" value="submit"/>
+    </form>
+
+</body>
+</html>
